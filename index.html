@@ -3,112 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PikaTech45 | Cricket eBooks</title>
+<title>Pikatech45 Cricket Ebooks</title>
 
 <style>
 
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
-background:#f5f5f5;
+background:#f4f7fb;
+color:#333;
 }
 
-/* NAVBAR */
-
-nav{
+header{
+background:#0d1b2a;
+color:white;
+padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-background:#111;
-color:white;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-color:#00ffae;
+header h1{
+margin:0;
 }
 
 nav a{
 color:white;
-text-decoration:none;
 margin-left:20px;
+text-decoration:none;
+font-weight:bold;
 }
-
-/* HERO */
 
 .hero{
 text-align:center;
-padding:100px 20px;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+padding:80px 20px;
+background:linear-gradient(120deg,#1b263b,#415a77);
 color:white;
 }
 
-.hero h1{
+.hero h2{
 font-size:40px;
-margin-bottom:20px;
 }
 
-.hero button{
+.btn{
+display:inline-block;
 padding:12px 25px;
-border:none;
-background:#00ffae;
-font-size:16px;
-cursor:pointer;
+background:#ff9800;
+color:white;
+text-decoration:none;
 border-radius:5px;
+margin-top:20px;
 }
 
-/* PRODUCTS */
-
-.products{
+.section{
 padding:60px 20px;
 text-align:center;
 }
 
-.products h2{
-margin-bottom:40px;
-}
-
-.grid{
+.features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
+max-width:1000px;
+margin:auto;
 }
 
 .card{
 background:white;
 padding:20px;
 border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.card h3{
-margin:10px 0;
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
 }
 
-.price{
-color:#00a86b;
+.review{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.stat{
+font-size:22px;
 font-weight:bold;
 }
 
-.card button{
-margin-top:10px;
-padding:10px 20px;
-background:#111;
-color:white;
-border:none;
-cursor:pointer;
-}
-
-/* FOOTER */
-
 footer{
-text-align:center;
-padding:20px;
-background:#111;
+background:#0d1b2a;
 color:white;
-margin-top:50px;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
 
 </style>
@@ -116,57 +115,120 @@ margin-top:50px;
 
 <body>
 
+<header>
+<h1>Pikatech45</h1>
 <nav>
-<div class="logo">PikaTech45</div>
-<div>
 <a href="#">Home</a>
 <a href="#">Ebooks</a>
+<a href="#">About</a>
 <a href="#">Contact</a>
-</div>
 </nav>
+</header>
 
 <section class="hero">
-<h1>Master Cricket Skills</h1>
-<p>Learn Batting, Bowling & Cricket Secrets</p>
-<button>View eBooks</button>
+<h2>Master Cricket Skills</h2>
+<p>Affordable cricket ebooks with instant download starting from ₹49.</p>
+<a href="#" class="btn">Browse Ebooks</a>
 </section>
 
-<section class="products">
+<section class="section">
+<h2>Why Pikatech45</h2>
 
-<h2>Popular Cricket eBooks</h2>
-
-<div class="grid">
+<div class="features">
 
 <div class="card">
-<h3>Batting Mastery Guide</h3>
-<p class="price">₹99</p>
-<button>Buy Now</button>
+<h3>Instant Download</h3>
+<p>Get your ebook immediately after purchase and start practicing.</p>
 </div>
 
 <div class="card">
-<h3>Fast Bowling Secrets</h3>
-<p class="price">₹99</p>
-<button>Buy Now</button>
+<h3>Prices from ₹49</h3>
+<p>High-quality cricket guides at affordable prices.</p>
 </div>
 
 <div class="card">
-<h3>Rohit Sharma Batting Blueprint</h3>
-<p class="price">₹149</p>
-<button>Buy Now</button>
+<h3>Mobile Friendly</h3>
+<p>Read on phone, tablet, or laptop anytime.</p>
 </div>
 
 <div class="card">
-<h3>Street Cricket Tricks</h3>
-<p class="price">₹79</p>
-<button>Buy Now</button>
+<h3>Secure Checkout</h3>
+<p>Encrypted payments keep your information safe.</p>
 </div>
 
 </div>
+</section>
+
+<section class="section">
+<h2>Customer Reviews</h2>
+
+<div class="reviews">
+
+<div class="review">
+<p>"Batting tips changed how I play pace bowling."</p>
+<strong>Arjun Reddy</strong>
+</div>
+
+<div class="review">
+<p>"My nephew improved his bowling accuracy in 2 weeks."</p>
+<strong>Priya Sharma</strong>
+</div>
+
+<div class="review">
+<p>"Best beginner cricket fitness guide."</p>
+<strong>Vikram Patel</strong>
+</div>
+
+<div class="review">
+<p>"Street cricket tricks are amazing."</p>
+<strong>Rohan Singh</strong>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Trusted by Cricket Fans</h2>
+
+<div class="stats">
+
+<div class="stat">
+500+<br>
+Ebooks Downloaded
+</div>
+
+<div class="stat">
+4.8/5<br>
+Average Rating
+</div>
+
+<div class="stat">
+₹49–₹199<br>
+Affordable Price
+</div>
+
+<div class="stat">
+100%<br>
+Instant Delivery
+</div>
+
+</div>
+
+<a href="#" class="btn">Explore Ebooks</a>
 
 </section>
 
 <footer>
-© 2026 PikaTech45 | Cricket Learning Hub
+
+<h3>Pikatech45</h3>
+
+<p>
+<a href="#" style="color:white">Privacy Policy</a> |
+<a href="#" style="color:white">Terms of Service</a>
+</p>
+
+<p>© 2026 Pikatech45</p>
+
 </footer>
 
 </body>
