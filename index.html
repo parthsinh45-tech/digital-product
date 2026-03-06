@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>50 Cricket Batting Secrets</title>
+
+<title>Cricket Batting Secrets</title>
 
 <style>
 
@@ -11,7 +14,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -25,12 +28,12 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:20px 60px;
 background:#020617;
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:bold;
 color:#38bdf8;
 }
@@ -38,28 +41,35 @@ color:#38bdf8;
 /* HERO */
 
 .hero{
-text-align:center;
-padding:80px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 10%;
+flex-wrap:wrap;
 }
 
-.hero h1{
-font-size:40px;
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:45px;
 margin-bottom:20px;
 color:#38bdf8;
 }
 
-.hero p{
-font-size:18px;
+.hero-text p{
 margin-bottom:30px;
+line-height:1.6;
 color:#cbd5f5;
 }
 
 .btn{
 background:#22c55e;
 padding:15px 35px;
-font-size:18px;
 border:none;
 border-radius:8px;
+font-size:18px;
 cursor:pointer;
 color:white;
 }
@@ -68,32 +78,41 @@ color:white;
 background:#16a34a;
 }
 
+.hero img{
+width:350px;
+border-radius:10px;
+}
+
 /* FEATURES */
 
 .features{
+padding:80px 10%;
+text-align:center;
+}
+
+.features h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.feature-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:60px 40px;
+gap:25px;
 }
 
 .card{
 background:#1e293b;
 padding:25px;
 border-radius:10px;
-text-align:center;
 }
 
 /* TESTIMONIAL */
 
 .testimonial{
-padding:60px 20px;
-text-align:center;
+padding:80px 10%;
 background:#020617;
-}
-
-.testimonial h2{
-margin-bottom:20px;
+text-align:center;
 }
 
 .review{
@@ -106,69 +125,115 @@ color:#cbd5f5;
 /* PRICE */
 
 .price{
+padding:80px 10%;
 text-align:center;
-padding:60px 20px;
 }
 
 .price h2{
-font-size:36px;
-color:#38bdf8;
+font-size:40px;
 margin-bottom:20px;
+color:#38bdf8;
 }
 
+/* FOOTER */
+
 footer{
-text-align:center;
-padding:20px;
 background:#020617;
+text-align:center;
+padding:25px;
 color:#94a3b8;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+margin-top:30px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <nav>
+
 <div class="logo">Hitman Cricket Guide</div>
+
 </nav>
 
 <section class="hero">
 
+<div class="hero-text">
+
 <h1>50 Cricket Batting Secrets</h1>
 
-<p>Learn Rohit Sharma Style Batting Techniques</p>
+<p>
+Learn professional batting techniques inspired by Rohit Sharma.
+Improve timing, shot selection and confidence with proven drills.
+</p>
 
 <a href="https://gumroad.com">
 <button class="btn">Buy Now ₹149</button>
 </a>
 
+</div>
+
+<img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d">
+
 </section>
 
 <section class="features">
 
+<h2>What You Will Learn</h2>
+
+<div class="feature-grid">
+
 <div class="card">
+
 <h3>Shot Selection</h3>
-<p>Learn when to play drives, pulls and cuts.</p>
+
+<p>Know when to play drive, pull and cut shots.</p>
+
 </div>
 
 <div class="card">
-<h3>Footwork</h3>
-<p>Improve balance and timing like pro players.</p>
+
+<h3>Footwork Mastery</h3>
+
+<p>Improve balance and timing like professional players.</p>
+
 </div>
 
 <div class="card">
+
 <h3>Practice Drills</h3>
-<p>Daily drills to become a better batsman.</p>
+
+<p>Daily drills to build batting confidence.</p>
+
+</div>
+
 </div>
 
 </section>
 
 <section class="testimonial">
 
-<h2>What Players Say</h2>
+<h2>Player Review</h2>
 
 <p class="review">
-"This guide improved my batting confidence in just 2 weeks."
+
+"This guide improved my batting confidence in just 2 weeks. Highly recommended for beginners."
+
 </p>
 
 </section>
@@ -178,7 +243,9 @@ color:#94a3b8;
 <h2>Only ₹149</h2>
 
 <a href="https://gumroad.com">
+
 <button class="btn">Get Instant Access</button>
+
 </a>
 
 </section>
@@ -190,4 +257,5 @@ color:#94a3b8;
 </footer>
 
 </body>
+
 </html>
