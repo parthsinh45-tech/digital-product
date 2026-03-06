@@ -20,6 +20,7 @@ font-family:Arial, Helvetica, sans-serif;
 body{
 background:#0f172a;
 color:white;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -28,7 +29,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
+padding:20px 10%;
 background:#020617;
 }
 
@@ -41,32 +42,26 @@ color:#38bdf8;
 /* HERO */
 
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 10%;
-flex-wrap:wrap;
+text-align:center;
+padding:100px 20px;
 }
 
-.hero-text{
-max-width:500px;
-}
-
-.hero-text h1{
-font-size:45px;
+.hero h1{
+font-size:48px;
 margin-bottom:20px;
 color:#38bdf8;
 }
 
-.hero-text p{
+.hero p{
+max-width:600px;
+margin:auto;
 margin-bottom:30px;
-line-height:1.6;
 color:#cbd5f5;
 }
 
 .btn{
 background:#22c55e;
-padding:15px 35px;
+padding:15px 40px;
 border:none;
 border-radius:8px;
 font-size:18px;
@@ -78,24 +73,31 @@ color:white;
 background:#16a34a;
 }
 
-.hero img{
-width:350px;
-border-radius:10px;
+/* PRODUCT IMAGE */
+
+.product{
+text-align:center;
+padding:40px;
+}
+
+.product img{
+width:300px;
+border-radius:12px;
 }
 
 /* FEATURES */
 
 .features{
 padding:80px 10%;
-text-align:center;
 }
 
 .features h2{
+text-align:center;
 margin-bottom:40px;
-font-size:32px;
+font-size:34px;
 }
 
-.feature-grid{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -107,11 +109,27 @@ padding:25px;
 border-radius:10px;
 }
 
+/* BENEFITS */
+
+.benefits{
+padding:80px 10%;
+background:#020617;
+text-align:center;
+}
+
+.benefits ul{
+list-style:none;
+margin-top:20px;
+}
+
+.benefits li{
+margin:10px 0;
+}
+
 /* TESTIMONIAL */
 
 .testimonial{
 padding:80px 10%;
-background:#020617;
 text-align:center;
 }
 
@@ -122,11 +140,27 @@ font-style:italic;
 color:#cbd5f5;
 }
 
+/* FAQ */
+
+.faq{
+padding:80px 10%;
+background:#020617;
+}
+
+.faq h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.faq-item{
+margin-bottom:20px;
+}
+
 /* PRICE */
 
 .price{
-padding:80px 10%;
 text-align:center;
+padding:80px 20px;
 }
 
 .price h2{
@@ -148,13 +182,8 @@ color:#94a3b8;
 
 @media(max-width:768px){
 
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero img{
-margin-top:30px;
+.hero h1{
+font-size:36px;
 }
 
 }
@@ -173,20 +202,19 @@ margin-top:30px;
 
 <section class="hero">
 
-<div class="hero-text">
-
 <h1>50 Cricket Batting Secrets</h1>
 
-<p>
-Learn professional batting techniques inspired by Rohit Sharma.
-Improve timing, shot selection and confidence with proven drills.
-</p>
+<p>Master professional batting techniques inspired by Rohit Sharma and improve your performance instantly.</p>
 
 <a href="https://gumroad.com">
+
 <button class="btn">Buy Now ₹149</button>
+
 </a>
 
-</div>
+</section>
+
+<section class="product">
 
 <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d">
 
@@ -196,21 +224,21 @@ Improve timing, shot selection and confidence with proven drills.
 
 <h2>What You Will Learn</h2>
 
-<div class="feature-grid">
+<div class="grid">
 
 <div class="card">
 
 <h3>Shot Selection</h3>
 
-<p>Know when to play drive, pull and cut shots.</p>
+<p>Understand the perfect timing for drives, pulls and cuts.</p>
 
 </div>
 
 <div class="card">
 
-<h3>Footwork Mastery</h3>
+<h3>Footwork</h3>
 
-<p>Improve balance and timing like professional players.</p>
+<p>Improve balance and control like professional batsmen.</p>
 
 </div>
 
@@ -218,7 +246,7 @@ Improve timing, shot selection and confidence with proven drills.
 
 <h3>Practice Drills</h3>
 
-<p>Daily drills to build batting confidence.</p>
+<p>Daily routines used by professional cricket players.</p>
 
 </div>
 
@@ -226,15 +254,55 @@ Improve timing, shot selection and confidence with proven drills.
 
 </section>
 
+<section class="benefits">
+
+<h2>Why This Guide Works</h2>
+
+<ul>
+
+<li>✔ Simple step-by-step techniques</li>
+
+<li>✔ Used by professional players</li>
+
+<li>✔ Easy drills for beginners</li>
+
+<li>✔ Instant improvement tips</li>
+
+</ul>
+
+</section>
+
 <section class="testimonial">
 
-<h2>Player Review</h2>
+<h2>Player Feedback</h2>
 
 <p class="review">
 
-"This guide improved my batting confidence in just 2 weeks. Highly recommended for beginners."
+"This guide helped me improve my batting confidence and shot selection in just 2 weeks."
 
 </p>
+
+</section>
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<b>Is this guide beginner friendly?</b>
+
+<p>Yes, the guide is designed for beginners and intermediate players.</p>
+
+</div>
+
+<div class="faq-item">
+
+<b>How will I receive the guide?</b>
+
+<p>You will receive an instant PDF download after purchase.</p>
+
+</div>
 
 </section>
 
