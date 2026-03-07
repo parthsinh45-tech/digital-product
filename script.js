@@ -1,26 +1,43 @@
-function payNow(){
+async function payNow(){
+
+const res = await fetch("/create-order",{method:"POST"});
+const order = await res.json();
 
 var options = {
 
-"key": "rzp_live_SOJbS3S4m8sNI3",
+key:"rzp_live_SOJbS3S4m8sNI3",
 
-"amount": 4900,
+amount:order.amount,
 
-"currency": "INR",
+currency:"INR",
 
-"name": "PikaTech45",
+order_id:order.id,
 
-"description": "Cricket Ebook",
+handler:async function(response){
 
-"handler": function (response){
+const verify = await fetch("/verify-payment",{
 
-window.location.href="success.html";
+method:"POST",
+
+headers:{"Content-Type":"application/json"},
+
+body:JSON.stringify(response)
+
+});
+
+const data = await verify.json();
+
+if(data.success){
+
+window.location=data.download;
+
+}
 
 }
 
 };
 
-var rzp = new Razorpay(options);
+var rzp=new Razorpay(options);
 
 rzp.open();
 
