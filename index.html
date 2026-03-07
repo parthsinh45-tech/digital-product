@@ -6,52 +6,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Resume Builder</title>
+<title>Developer Tools Hub</title>
 
 <link rel="stylesheet" href="style.css">
-
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </head>
 
 <body>
 
-<h1 class="title">AI Resume Builder</h1>
+<h1>Developer Tools Hub</h1>
 
 <div class="container">
 
-<!-- FORM -->
+<!-- PASSWORD GENERATOR -->
 
-<div class="form">
+<div class="tool">
 
-<input id="name" placeholder="Full Name" oninput="updateResume()">
+<h2>Password Generator</h2>
 
-<input id="role" placeholder="Job Role" oninput="updateResume()">
+<input id="length" type="number" placeholder="Password length">
 
-<textarea id="skills" placeholder="Skills" oninput="updateResume()"></textarea>
+<button onclick="generatePassword()">Generate</button>
 
-<textarea id="experience" placeholder="Experience" oninput="updateResume()"></textarea>
-
-<button onclick="payNow()">Download PDF</button>
+<p id="password"></p>
 
 </div>
 
 
-<!-- PREVIEW -->
+<!-- JSON FORMATTER -->
 
-<div class="preview" id="preview">
+<div class="tool">
 
-<h2 id="pname">Your Name</h2>
+<h2>JSON Formatter</h2>
 
-<h3 id="prole">Job Role</h3>
+<textarea id="jsonInput" placeholder="Paste JSON"></textarea>
 
-<h4>Skills</h4>
+<button onclick="formatJSON()">Format</button>
 
-<p id="pskills">Your skills will appear here</p>
+<pre id="jsonOutput"></pre>
 
-<h4>Experience</h4>
+</div>
 
-<p id="pexperience">Your experience will appear here</p>
+
+<!-- COLOR PALETTE -->
+
+<div class="tool">
+
+<h2>Color Palette</h2>
+
+<button onclick="generateColor()">Generate Color</button>
+
+<div id="colorBox"></div>
+
+<p id="colorCode"></p>
 
 </div>
 
