@@ -3,7 +3,14 @@ body{
 font-family:Arial;
 background:#0f172a;
 color:white;
+margin:0;
+
+}
+
+.title{
+
 text-align:center;
+margin-top:20px;
 
 }
 
@@ -11,8 +18,8 @@ text-align:center;
 
 display:flex;
 justify-content:center;
-gap:40px;
-margin-top:40px;
+gap:50px;
+padding:40px;
 
 }
 
@@ -48,8 +55,20 @@ font-weight:bold;
 
 background:white;
 color:black;
-padding:20px;
-width:350px;
+padding:30px;
+width:400px;
 border-radius:10px;
+
+}
+
+.preview h2{
+
+margin-bottom:5px;
+
+}
+
+.preview h3{
+
+margin-top:0;
 
 }
