@@ -1,54 +1,42 @@
 body{
-
 font-family:Arial;
 background:#0f172a;
 color:white;
 text-align:center;
-
 }
 
 .container{
-
 display:flex;
 justify-content:center;
 gap:40px;
 margin-top:40px;
-
 }
 
 .form{
-
 display:flex;
 flex-direction:column;
 width:300px;
 gap:10px;
-
 }
 
-input, textarea{
-
+input,textarea{
 padding:10px;
+border-radius:6px;
 border:none;
-border-radius:5px;
-
 }
 
 button{
-
 padding:12px;
 background:#38bdf8;
 border:none;
 cursor:pointer;
 border-radius:6px;
-
 }
 
 .preview{
-
 background:white;
 color:black;
 padding:20px;
 width:350px;
 border-radius:10px;
-
 }
