@@ -8,7 +8,7 @@ let password="";
 
 for(let i=0;i<length;i++){
 
-password+=chars.charAt(Math.floor(Math.random()*chars.length));
+password+=chars[Math.floor(Math.random()*chars.length)];
 
 }
 
@@ -45,5 +45,15 @@ let color="#"+Math.floor(Math.random()*16777215).toString(16);
 document.getElementById("colorBox").style.background=color;
 
 document.getElementById("colorCode").innerText=color;
+
+}
+
+
+
+function encodeBase(){
+
+let text=document.getElementById("baseInput").value;
+
+document.getElementById("baseOutput").innerText=btoa(text);
 
 }
