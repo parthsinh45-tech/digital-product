@@ -1,34 +1,57 @@
-function generateResume(){
+async function generateResume(){
 
 let name=document.getElementById("name").value;
 let role=document.getElementById("role").value;
 let skills=document.getElementById("skills").value;
-let experience=document.getElementById("experience").value;
 
-let resume=`
+let response=await fetch("/ai",{
 
-<h2>${name}</h2>
+method:"POST",
 
-<h3>${role}</h3>
+headers:{
+"Content-Type":"application/json"
+},
 
-<h4>Skills</h4>
+body:JSON.stringify({
+name,
+role,
+skills
+})
 
-<p>${skills}</p>
+});
 
-<h4>Experience</h4>
+let data=await response.json();
 
-<p>${experience}</p>
-
-`;
-
-document.getElementById("resumePreview").innerHTML=resume;
+document.getElementById("preview").innerHTML=data.resume;
 
 }
 
 
 
-function downloadPDF(){
+function payNow(){
+
+var options={
+
+key:"rzp_live_xxxxx",
+
+amount:2900,
+
+currency:"INR",
+
+name:"AI Resume Builder",
+
+description:"Premium Resume Download",
+
+handler:function(){
 
 window.print();
+
+}
+
+};
+
+var rzp=new Razorpay(options);
+
+rzp.open();
 
 }
