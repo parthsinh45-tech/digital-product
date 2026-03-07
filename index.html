@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Developer Tools Hub</title>
+<title>DevTools Hub</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,17 +14,19 @@
 
 <body>
 
-<h1>Developer Tools Hub</h1>
+<nav>
 
-<div class="container">
+<h2>DevTools Hub</h2>
 
-<!-- PASSWORD GENERATOR -->
+</nav>
+
+<section class="tools">
 
 <div class="tool">
 
-<h2>Password Generator</h2>
+<h3>Password Generator</h3>
 
-<input id="length" type="number" placeholder="Password length">
+<input id="length" placeholder="Password Length">
 
 <button onclick="generatePassword()">Generate</button>
 
@@ -33,13 +35,11 @@
 </div>
 
 
-<!-- JSON FORMATTER -->
-
 <div class="tool">
 
-<h2>JSON Formatter</h2>
+<h3>JSON Formatter</h3>
 
-<textarea id="jsonInput" placeholder="Paste JSON"></textarea>
+<textarea id="jsonInput"></textarea>
 
 <button onclick="formatJSON()">Format</button>
 
@@ -48,13 +48,11 @@
 </div>
 
 
-<!-- COLOR PALETTE -->
-
 <div class="tool">
 
-<h2>Color Palette</h2>
+<h3>Color Generator</h3>
 
-<button onclick="generateColor()">Generate Color</button>
+<button onclick="generateColor()">Generate</button>
 
 <div id="colorBox"></div>
 
@@ -62,7 +60,20 @@
 
 </div>
 
+
+<div class="tool">
+
+<h3>Base64 Encoder</h3>
+
+<textarea id="baseInput"></textarea>
+
+<button onclick="encodeBase()">Encode</button>
+
+<p id="baseOutput"></p>
+
 </div>
+
+</section>
 
 <script src="script.js"></script>
 
