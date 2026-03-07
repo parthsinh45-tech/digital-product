@@ -1,53 +1,51 @@
-const express = require("express");
-const crypto = require("crypto");
-const Razorpay = require("razorpay");
+const express=require("express");
 
-const app = express();
+const fetch=require("node-fetch");
+
+const app=express();
 
 app.use(express.json());
-app.use(express.static("public"));
 
-const razorpay = new Razorpay({
-key_id: "YOUR_KEY_ID",
-key_secret: "YOUR_KEY_SECRET"
-});
+app.post("/ai",async(req,res)=>{
 
-app.post("/create-order", async (req, res) => {
+let {name,role,skills}=req.body;
 
-const options = {
-amount: 4900,
-currency: "INR"
-};
+let prompt=`
+Create a professional resume summary
+Name: ${name}
+Role: ${role}
+Skills: ${skills}
+`;
 
-const order = await razorpay.orders.create(options);
+let response=await fetch("https://api.openai.com/v1/chat/completions",{
 
-res.json(order);
+method:"POST",
 
-});
+headers:{
+"Content-Type":"application/json",
+"Authorization":"Bearer YOUR_OPENAI_KEY"
+},
 
-app.post("/verify-payment", (req, res) => {
+body:JSON.stringify({
 
-const {razorpay_order_id, razorpay_payment_id, razorpay_signature} = req.body;
+model:"gpt-4.1-mini",
 
-const body = razorpay_order_id + "|" + razorpay_payment_id;
+messages:[
+{role:"user",content:prompt}
+]
 
-const expected = crypto
-.createHmac("sha256","YOUR_KEY_SECRET")
-.update(body)
-.digest("hex");
-
-if(expected === razorpay_signature){
-
-res.json({success:true, download:"/ebooks/batting-guide.pdf"});
-
-}else{
-
-res.json({success:false});
-
-}
+})
 
 });
 
-app.listen(3000,()=>{
-console.log("Server running");
+let data=await response.json();
+
+res.json({
+
+resume:data.choices[0].message.content
+
 });
+
+});
+
+app.listen(3000);
