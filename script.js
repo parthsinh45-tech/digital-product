@@ -1,28 +1,27 @@
-async function generateResume(){
+function generateResume(){
 
 let name=document.getElementById("name").value;
 let role=document.getElementById("role").value;
 let skills=document.getElementById("skills").value;
+let experience=document.getElementById("experience").value;
 
-let response=await fetch("/ai",{
+let resume=`
 
-method:"POST",
+<h2>${name}</h2>
 
-headers:{
-"Content-Type":"application/json"
-},
+<h3>${role}</h3>
 
-body:JSON.stringify({
-name,
-role,
-skills
-})
+<h4>Skills</h4>
 
-});
+<p>${skills}</p>
 
-let data=await response.json();
+<h4>Experience</h4>
 
-document.getElementById("preview").innerHTML=data.resume;
+<p>${experience}</p>
+
+`;
+
+document.getElementById("preview").innerHTML=resume;
 
 }
 
@@ -40,7 +39,7 @@ currency:"INR",
 
 name:"AI Resume Builder",
 
-description:"Premium Resume Download",
+description:"Resume PDF Download",
 
 handler:function(){
 
