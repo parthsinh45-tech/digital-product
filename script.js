@@ -1,27 +1,16 @@
-function generateResume(){
+function updateResume(){
 
-let name=document.getElementById("name").value;
-let role=document.getElementById("role").value;
-let skills=document.getElementById("skills").value;
-let experience=document.getElementById("experience").value;
+document.getElementById("pname").innerText =
+document.getElementById("name").value;
 
-let resume=`
+document.getElementById("prole").innerText =
+document.getElementById("role").value;
 
-<h2>${name}</h2>
+document.getElementById("pskills").innerText =
+document.getElementById("skills").value;
 
-<h3>${role}</h3>
-
-<h4>Skills</h4>
-
-<p>${skills}</p>
-
-<h4>Experience</h4>
-
-<p>${experience}</p>
-
-`;
-
-document.getElementById("preview").innerHTML=resume;
+document.getElementById("pexperience").innerText =
+document.getElementById("experience").value;
 
 }
 
