@@ -2,7 +2,7 @@ function payNow(){
 
 var options = {
 
-"key": "YOUR_RAZORPAY_KEY",
+"key": "rzp_live_SOJbS3S4m8sNI3",
 
 "amount": 4900,
 
