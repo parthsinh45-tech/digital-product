@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CodeWithPika | AI & Coding Hub</title>
+<title>AI Resume Builder</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,114 +14,34 @@
 
 <body>
 
-<nav class="navbar">
+<h1>AI Resume Builder</h1>
 
-<div class="logo">CodeWithPika</div>
+<div class="container">
 
-<ul class="nav-links">
-<li><a href="#">Home</a></li>
-<li><a href="#ai">AI Tools</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#blog">Blog</a></li>
-</ul>
+<div class="form">
 
-</nav>
+<input id="name" placeholder="Your Name">
 
+<input id="role" placeholder="Your Role">
 
-<section class="hero">
+<textarea id="skills" placeholder="Your Skills"></textarea>
 
-<h1>Build With AI & Code</h1>
+<textarea id="experience" placeholder="Experience"></textarea>
 
-<p>Discover powerful AI tools and coding resources.</p>
+<button onclick="generateResume()">Generate Resume</button>
 
-<button onclick="scrollSection()">Explore Tools</button>
-
-</section>
-
-
-<section id="ai" class="section">
-
-<h2>AI Tools</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>ChatGPT</h3>
-<p>Generate code and automate tasks.</p>
-</div>
-
-<div class="card">
-<h3>GitHub Copilot</h3>
-<p>AI coding assistant for developers.</p>
-</div>
-
-<div class="card">
-<h3>Claude AI</h3>
-<p>Advanced AI for writing and coding.</p>
-</div>
+<button onclick="downloadPDF()">Download PDF</button>
 
 </div>
 
-</section>
 
+<div class="preview" id="resumePreview">
 
-<section id="projects" class="section">
-
-<h2>Developer Projects</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>JavaScript Games</h3>
-<p>Fun coding projects to learn JS.</p>
-</div>
-
-<div class="card">
-<h3>AI Website Builder</h3>
-<p>Create websites using AI tools.</p>
-</div>
-
-<div class="card">
-<h3>Automation Scripts</h3>
-<p>Automate developer tasks.</p>
-</div>
+<h2>Your Resume Preview</h2>
 
 </div>
 
-</section>
-
-
-<section id="blog" class="section">
-
-<h2>Latest Blog</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Top AI Tools 2026</h3>
-<p>Best AI tools every student should use.</p>
 </div>
-
-<div class="card">
-<h3>JavaScript Roadmap</h3>
-<p>Learn JS step by step.</p>
-</div>
-
-<div class="card">
-<h3>Build Your First Website</h3>
-<p>Complete beginner guide.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 CodeWithPika</p>
-
-</footer>
 
 <script src="script.js"></script>
 
