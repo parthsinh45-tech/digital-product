@@ -16,30 +16,42 @@
 
 <body>
 
-<h1>AI Resume Builder</h1>
+<h1 class="title">AI Resume Builder</h1>
 
 <div class="container">
 
+<!-- FORM -->
+
 <div class="form">
 
-<input id="name" placeholder="Full Name">
+<input id="name" placeholder="Full Name" oninput="updateResume()">
 
-<input id="role" placeholder="Job Role">
+<input id="role" placeholder="Job Role" oninput="updateResume()">
 
-<textarea id="skills" placeholder="Skills"></textarea>
+<textarea id="skills" placeholder="Skills" oninput="updateResume()"></textarea>
 
-<textarea id="experience" placeholder="Experience"></textarea>
-
-<button onclick="generateResume()">Generate Resume</button>
+<textarea id="experience" placeholder="Experience" oninput="updateResume()"></textarea>
 
 <button onclick="payNow()">Download PDF</button>
 
 </div>
 
 
+<!-- PREVIEW -->
+
 <div class="preview" id="preview">
 
-<h2>Your Resume Preview</h2>
+<h2 id="pname">Your Name</h2>
+
+<h3 id="prole">Job Role</h3>
+
+<h4>Skills</h4>
+
+<p id="pskills">Your skills will appear here</p>
+
+<h4>Experience</h4>
+
+<p id="pexperience">Your experience will appear here</p>
 
 </div>
 
