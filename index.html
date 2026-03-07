@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>AI Resume Builder Pro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Resume Builder</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -21,22 +22,24 @@
 
 <div class="form">
 
-<input id="name" placeholder="Name">
+<input id="name" placeholder="Full Name">
 
-<input id="role" placeholder="Role">
+<input id="role" placeholder="Job Role">
 
 <textarea id="skills" placeholder="Skills"></textarea>
 
-<button onclick="generateResume()">Generate AI Resume</button>
+<textarea id="experience" placeholder="Experience"></textarea>
 
-<button onclick="payNow()">Download Premium PDF</button>
+<button onclick="generateResume()">Generate Resume</button>
+
+<button onclick="payNow()">Download PDF</button>
 
 </div>
 
 
 <div class="preview" id="preview">
 
-<h2>Your Resume</h2>
+<h2>Your Resume Preview</h2>
 
 </div>
 
