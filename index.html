@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Builder Pro</title>
 
-<title>AI Resume Builder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="style.css">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </head>
 
@@ -20,24 +21,22 @@
 
 <div class="form">
 
-<input id="name" placeholder="Your Name">
+<input id="name" placeholder="Name">
 
-<input id="role" placeholder="Your Role">
+<input id="role" placeholder="Role">
 
-<textarea id="skills" placeholder="Your Skills"></textarea>
+<textarea id="skills" placeholder="Skills"></textarea>
 
-<textarea id="experience" placeholder="Experience"></textarea>
+<button onclick="generateResume()">Generate AI Resume</button>
 
-<button onclick="generateResume()">Generate Resume</button>
-
-<button onclick="downloadPDF()">Download PDF</button>
+<button onclick="payNow()">Download Premium PDF</button>
 
 </div>
 
 
-<div class="preview" id="resumePreview">
+<div class="preview" id="preview">
 
-<h2>Your Resume Preview</h2>
+<h2>Your Resume</h2>
 
 </div>
 
