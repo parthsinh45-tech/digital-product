@@ -1,45 +1,49 @@
-function updateResume(){
+function generatePassword(){
 
-document.getElementById("pname").innerText =
-document.getElementById("name").value;
+let length=document.getElementById("length").value;
 
-document.getElementById("prole").innerText =
-document.getElementById("role").value;
+let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-document.getElementById("pskills").innerText =
-document.getElementById("skills").value;
+let password="";
 
-document.getElementById("pexperience").innerText =
-document.getElementById("experience").value;
+for(let i=0;i<length;i++){
+
+password+=chars.charAt(Math.floor(Math.random()*chars.length));
+
+}
+
+document.getElementById("password").innerText=password;
 
 }
 
 
 
-function payNow(){
+function formatJSON(){
 
-var options={
+let input=document.getElementById("jsonInput").value;
 
-key:"rzp_live_xxxxx",
+try{
 
-amount:2900,
+let formatted=JSON.stringify(JSON.parse(input),null,4);
 
-currency:"INR",
+document.getElementById("jsonOutput").innerText=formatted;
 
-name:"AI Resume Builder",
+}catch{
 
-description:"Resume PDF Download",
-
-handler:function(){
-
-window.print();
+document.getElementById("jsonOutput").innerText="Invalid JSON";
 
 }
 
-};
+}
 
-var rzp=new Razorpay(options);
 
-rzp.open();
+
+function generateColor(){
+
+let color="#"+Math.floor(Math.random()*16777215).toString(16);
+
+document.getElementById("colorBox").style.background=color;
+
+document.getElementById("colorCode").innerText=color;
 
 }
